@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="btnRed()">Change H1</button>
+        <button onclick="btnGreen()">Change H3</button>
+        <button onclick="bthBlue()">Change H5</button>
+        <button onclick="btnGreenClass()">Change Green</button>
+        <button onclick="btnRedClass()">Change Red</button>
+        <button onclick="btnBlueClass()">Change Blue</button>
+        <script>
+            function btnRed(){
+                var red=document.querySelector('h1')
+                red.style.color="red"
+            } 
+
+            function btnGreen(){
+                var greens=document.querySelectorAll('h3')
+                for(var i=0; i<greens.length; i++){
+                    var gr=greens[i]
+                    gr.style.color="green"
+                }
+               
+            }
+
+            function bthBlue(){
+                var blue=document.querySelectorAll('h5')
+                for(var i=0; i<blue.length; i++){
+                    var bl=blue[i]
+                    bl.style.color="blue"
+                }
+                
+            }
+
+            function btnGreenClass(){
+                var clsGreen=document.querySelectorAll('.green')
+                for(var i=0; i<clsGreen.length; i++){
+                    var eleGreen=clsGreen[i]
+                    eleGreen.style.color="green"
+                }
+            }
+
+            function btnRedClass(){
+                var clsRed=document.querySelectorAll('.red')
+                for(var i=0; i<clsRed.length; i++){
+                    var eleRed=clsRed[i]
+                    eleRed.style.color="red"
+                }  
+            }
+
+            function btnBlueClass(){
+                var clsBlue=document.querySelectorAll('.blue')
+                for(var i=0; i<clsBlue.length; i++){
+                    var eleBlue=clsBlue[i]
+                    eleBlue.style.color="blue"
+                }  
+            }
+
+        </script>
+    </body>
+</html>

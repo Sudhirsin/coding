@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid_2</title>
+        <style>
+         .grid-box{
+             display:grid;
+             grid-gap:20px;
+             grid-template-columns: auto auto auto;
+             grid-template-rows: 60px 60px;
+        
+         }
+         .grid-box div{
+             background:red;
+         }
+         #box1{
+             grid-area:1 / 1 / span 1 /span 3;
+         }
+         #box2{
+             grid-area:2 / 1 / span 1 / span 1;
+             background: green;
+             height:500px;
+         }
+         #box3{
+             grid-area:2 / 2 / span 1 / span 2;
+             background: teal;
+             height:500px;
+         }
+
+        </style>
+    </head>
+    <body>
+        <div class="grid-box">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout_4</title>
+        <style>
+         .grid-box{
+             display:grid;
+             grid-gap:20px;
+             grid-template-columns: 100px 100px 100px 100px 100px;
+             grid-template-rows: 100px 100px;
+             justify-content: center;
+             margin-top:100px;
+         }
+         .box1{
+             background:teal;
+         }
+         @media (max-width: 600px){
+            .grid-box{
+             display:grid;
+             grid-gap:20px;
+             grid-template-columns: 100px 100px 100px 100px 100px;
+             grid-template-rows: 100px 100px;
+             margin-top:100px;
+         }
+         .box1{
+             background:brown;
+         }
+         }
+         @media(min-width: 992px){
+            .grid-box{
+             display:grid;
+             grid-gap:20px;
+             grid-template-columns: 100px 100px 100px 100px 100px;
+             grid-template-rows: 100px 100px;
+             justify-content: center;
+             margin-top:100px;
+         }
+         .box1{
+             background:chartreuse;
+         }   
+         }
+        </style>
+    </head>
+    <body>
+        <div class="grid-box">
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+
+        </div>
+    </body>
+</html>

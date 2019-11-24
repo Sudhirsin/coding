@@ -1,0 +1,194 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .flex-box{
+                display:flex;
+                justify-content: center;
+            }
+            .flex-box div{
+                margin:5px
+                
+            }
+            #box1{
+                 width:400px;
+                 height:250px;
+                 background: lightgray;
+                 flex-direction: column;
+                 margin:auto;
+            
+            }
+            #img1{
+                width:120px;
+                height:150px;
+                margin-left:130px;
+            }
+            div #linus{
+                text-align: center;
+                color: blue;
+                font-size: 30px;
+            }
+            div #linusp{
+                text-align: center;
+                font-size: 25px;
+            }
+            #box2{
+                  width:700px;
+                  height:150px;
+                  margin:auto;
+                  margin-top:20px;
+                  /* background: red; */
+            }
+            #img2{
+                width:100px;
+                height:120px;
+            }
+            #salheading{
+                color:red;
+                font-size: 25px;
+            }
+            #box3{
+                 width:1000px;
+                 height:130px;
+                 margin:auto;
+                 background:orangered;
+                 margin-top:20px;
+                 flex-direction: row;
+            }
+            #bottom1{
+                 width:500px;
+                 height:120px;
+                 margin-left:15px;
+                 text-align: left;
+                 border-right:15px solid black;
+            }
+            #bottom2{
+                 width:500px;
+                 height:100px; 
+                 text-align: right;
+                 margin-right:15px;
+            }
+            .heading{
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+       <button id="btnCreate">Create Page</button>
+       <script>
+           var body=document.querySelector('body')
+           var create=document.getElementById('btnCreate')
+           function createUnix(){
+               var box1=document.createElement('div')
+               box1.setAttribute('class', 'flex-box')
+               box1.setAttribute('id', 'box1')
+               body.appendChild(box1)
+
+               //add image and div inside the id=box1
+                var imgdiv=document.createElement('div')
+                imgdiv.setAttribute('id', 'img')
+                box1.appendChild(imgdiv)
+
+                //adding img to img div
+                var img=document.createElement('img')
+                img.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg')
+                img.setAttribute('alt', 'Linus')
+                img.setAttribute('id', 'img1')
+                imgdiv.appendChild(img)
+
+                var linusDiv=document.createElement('div')
+                linusDiv.setAttribute('id', 'linus')
+                linusDiv.textContent="Linus Torvalds"
+                box1.appendChild(linusDiv)
+
+                var linusP=document.createElement('div')
+                linusP.setAttribute('id', 'linusP')
+                linusP.textContent="The creator of Linux & Git"
+                box1.appendChild(linusP)
+
+                //creating sal khan box2
+                var box2=document.createElement('div')
+                box2.setAttribute('class', 'flex-box')
+                box2.setAttribute('id', 'box2')
+                body.appendChild(box2)
+
+                //creating div inside box2
+                var divSalBox=document.createElement('div')
+                divSalBox.setAttribute('id', 'imgSal')
+                box2.appendChild(divSalBox)
+
+                //creating image inside box2
+                var salImg=document.createElement('img')
+                salImg.setAttribute('id', 'img2')
+                salImg.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg')
+                salImg.setAttribute('alt', 'Sal Khan')
+                divSalBox.appendChild(salImg)
+
+                var divSalContent=document.createElement('div')
+                divSalContent.setAttribute('id', 'salHead')
+                box2.appendChild(divSalContent)
+                //sal name haeding
+                var salHeading=document.createElement('div')
+                salHeading.setAttribute('id', 'salheading')
+                salHeading.textContent="Sal Khan"
+                divSalContent.appendChild(salHeading)
+
+                //creating div and inside para
+                var salPara=document.createElement('div')
+                salPara.setAttribute('id', 'salPara')
+                divSalContent.appendChild(salPara)
+                var p=document.createElement('p')
+                p.textContent="Salman Khan is the founder of the Khan Academy which has a mission <br /> of providing a free world-class education for anyone, anywhere."
+                salPara.appendChild(p)  
+
+                //creating bottom part
+                var box3=document.createElement('div')
+                box3.setAttribute('class', 'flex-box')
+                box3.setAttribute('id', 'box3')
+                body.appendChild(box3) 
+
+                //creating div inside bottom part
+                var bottom1=document.createElement('div')
+                bottom1.setAttribute('id', 'bottom1')
+                box3.appendChild(bottom1)
+
+                //creating h2
+                var h2=document.createElement('h2')
+                h2.setAttribute('class', 'heading')
+                h2.innerHTML="Ken Thompson"
+                bottom1.appendChild(h2)
+
+                //creating p
+                var pBottom=document.createElement('p')
+                pBottom.setAttribute('class', 'heading')
+                pBottom.innerHTML="Designed and Implemented the <br> original Unix operating system"
+                bottom1.appendChild(pBottom)
+
+
+                var bottom2=document.createElement('div')
+                bottom2.setAttribute('id', 'bottom2')
+                box3.appendChild(bottom2)
+
+                var h2bottom=document.createElement('h2')
+                h2bottom.setAttribute('class', 'heading')
+                h2bottom.innerHTML="Dennis Ritchie"
+                bottom2.appendChild(h2bottom)
+
+                //creating p
+                var pBottom1=document.createElement('p')
+                pBottom1.setAttribute('class', 'heading')
+                pBottom1.innerHTML="The creator of C programming Langauge"
+                bottom2.appendChild(pBottom1)
+                
+
+                //remove event listener
+            create.removeEventListener('click',createUnix)
+           }
+           create.addEventListener('click',createUnix)
+       </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="btnRemoveH1()">Remove H1</button>
+        <button onclick="btnRemoveH3()">Remove H3</button>
+        <button onclick="btnRemoveH5()">Remove H5</button>
+        <button onclick="btnRemoveRed()">Remove Red</button>
+        <button onclick="btnRemoveDiv()">Remove DIVS</button>
+        <script>
+            //remove h1 tag
+            function btnRemoveH1(){
+                var bodyElem= document.querySelector('body')
+                var removeH1=document.querySelector('h1')
+                bodyElem.removeChild(removeH1)
+            }
+
+            //remove h3 tag 
+            function btnRemoveH3(){
+                var bodyElem= document.querySelector('body')
+                var removeH3=document.querySelectorAll('h3')
+                for(var i=0; i<removeH3.length; i++){
+                    var removing=removeH3[i]
+                    bodyElem.removeChild(removing)
+                }
+            }
+
+            //removing h5 tag
+            function btnRemoveH5(){
+                var divParent=document.querySelector('#headings')
+                var removeH5=document.querySelectorAll('h5')
+
+                for(var i=0; i<removeH5.length; i++){
+                    var remoingH5Ele=removeH5[i]
+                    divParent.removeChild(remoingH5Ele)   
+                }
+            }
+
+            //removing red class content
+            function btnRemoveRed(){
+                var divParentRed=document.querySelector('#cont')
+                var removeRed=document.querySelectorAll('.red')
+
+                for(var i=0; i<removeRed.length; i++){
+                    var removingRed=removeRed[i]
+                    divParentRed.removeChild(removingRed)   
+                }
+
+            }
+
+            //removing din content
+            function btnRemoveRed(){
+                var divParentRed=document.querySelector('#cont')
+                var removeRed=document.querySelectorAll('.red')
+
+                for(var i=0; i<removeRed.length; i++){
+                    var removingRed=removeRed[i]
+                    divParentRed.removeChild(removingRed)   
+                }
+
+            }
+
+            //removing div element
+            function btnRemoveDiv(){
+                var divParentContent=document.querySelector('#cont')
+                var removeDiv=document.querySelectorAll('#cont div')
+
+                for(var i=0; i<removeDiv.length; i++){
+                    divParentContent.removeChild(removeDiv[i])        
+                }
+            }
+
+        </script>
+    </body>
+</html>

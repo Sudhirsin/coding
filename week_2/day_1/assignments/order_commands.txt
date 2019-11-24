@@ -1,0 +1,7 @@
+grep -i mumbai city_names_orders_rand.csv | wc -l
+grep -i bangalore city_names_orders_rand.csv | wc -l
+uniq -cd city_names_orders_rand.csv | sort -n | wc -l
+uniq -cd city_names_orders_rand.csv | sort -n | wc -1 | tail -1
+
+uniq -cd city_names_orders_rand.csv | grep -i mumbai | sort -n | wc -l 
+uniq -cd city_names_orders_rand.csv | grep -i mumbai | sort -n | wc -l | tail -1

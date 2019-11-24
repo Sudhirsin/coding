@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Marks Recorder</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="container">
+            <div class="nav">
+                <img id="imglogo" src="resources/logo.png" alt="schoolLogo"/>
+                <div id="schoolName">School Management System</div>
+            </div>
+            <div class="sidebar">
+                <h2>Student Details</h2>
+                <div>
+                    <form>
+                        <table>
+                            <tr>
+                                <td><label>Name:</label></td>
+                                <td><input type="text" id="name" placeholder="Enter your Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Grade:</label></td>
+                                <td><input type="text" id="grade" placeholder="Enter your Grade"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Marks:</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Science:</label></td>
+                                <td><input type="number" id="science" placeholder="Enter your Marks"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Math:</label></td>
+                                <td><input type="number" id="math" placeholder="Enter your Marks"></td>
+                            </tr>
+                            <tr>
+                                <td><label>English:</label></td>
+                                <td><input type="number" id="english" placeholder="Enter your Marks"></td>
+                            </tr>
+                            <tr>
+                                <td><label>History:</label></td>
+                                <td><input type="number" id="history" placeholder="Enter your Marks"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Geography:</label></td>
+                                <td><input type="number" id="geography" placeholder="Enter your Marks"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="filterStdGrade" value="Submit" onclick="stdDetails()" id="btnSubmit"/></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="contentArea">
+                <div id="filter">                  
+                    <div id="result">
+                        <h2>Student Performance</h2>
+                        <label>Filter:</label>
+                        <select class="selectFilter" id="selName">
+                             <option value="">--Select--</option>
+                             <option value="6th">6th</option>
+                             <option value="7th">7th</option>
+                             <option value="8th">8th</option>
+                             <option value="9th">9th</option> -->
+                        </select>
+                            <input type="submit" value="Details" id="btnStdDetails" onclick="findDeatils()" />
+                    </div>
+                </div>
+                
+                <div id="divResult">
+                    <h2>Result</h2>
+                    <div id="showResult">
+                        <table id="stdTable">
+                             
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>

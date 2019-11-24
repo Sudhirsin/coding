@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index Page</title>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .divBox{
+                width:500px;
+                height:200px;
+                margin:0 auto;
+                background: lightgray;
+                text-align: center;
+                padding-top: 100px;
+            }
+            input{
+                width: 150px;
+                height:50px;
+                border-radius: 5px;
+            }
+            button{
+                width: 100px;
+                height:50px;
+                border-radius: 5px;
+            }
+            select{
+                width: 150px;
+                height:50px;
+                border-radius: 5px;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="divBox" id="driveBox">
+            <h3>Check Your Egibility to Drive in India </h3>
+            <p id="showDrive"></p>
+            <input type="text" id="age" placeholder="Enter your Name">
+            <button onclick="driveInIndia()">Drive in India</button> 
+        </div>
+
+        <hr />
+        <br />
+        <br />
+        <br />
+
+        <div class="divBox" id="colorBox">
+            <h3>Change Button Background Ater Clicking</h3>
+            <input type="text" id="Color" placeholder="Enter the color name">
+            <button onclick="changeColor()" id="btnColor">Click Me to change color</button>
+        </div>
+
+        <hr />
+        <br />
+        <br />
+        <br />
+
+        <div class="divBox" id="countryBox">
+            <h3>Select Country to See their Continent</h3>
+            <select id="countrytSelect">
+                <option value="India">India</option>
+                <option value="United States America">United States  of America</option>
+                <option value="China">China</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Australia">Australia</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="South Aferica">South Aferica</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Agerntina">Agerntina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Sweden">Sweden</option>
+            </select> 
+            <button onclick="countryContinent()" id="btnCounrty">Find Continent</button>
+
+        </div>
+
+        
+
+
+
+
+
+    <script type="text/javascript">
+        function driveInIndia(){
+            var user=document.getElementById("age").value
+            if(user>18){
+               document.getElementById("showDrive").innerHTML="You can Drive in India"
+            }else if(user==18){
+                document.getElementById("showDrive").innerHTML="You are just old enough to drive in india"
+            }else{
+                document.getElementById("showDrive").innerHTML="You can not drive in india"
+            }
+        }
+
+        function changeColor(){
+            document.getElementById("btnColor").style.background=document.getElementById("Color").value
+        }
+
+        function countryContinent(){
+            var country=document.getElementById("countrytSelect").value
+
+            switch (country){
+
+                case "India":
+                    alert("The continent is New Delhi")
+                    break;
+
+                case "United States America":
+                    alert("The continent is Washington")
+                    break;
+
+                case "China":
+                    alert("The continent is Beijing")
+                    break;
+
+                case "Nepal":
+                    alert("The continent is Kathmandu")
+                    break;
+
+                case "Australia":
+                    alert("The continent is Canberra") 
+                    break;
+
+                case "France":
+                    alert("The continent is Paris")
+                    break;
+
+                case "Germany":
+                    alert("The continent is Berlin")
+                    break;
+
+                case Africa:
+                    alert("The continent is Pretoria")
+                    break; 
+
+                case "Nigeria":
+                    alert("The continent is Abuja")
+                    break;
+
+                case "Mexico":
+                    alert("The continent is Mexico City")
+                    break;
+
+                case "Argentina":
+                    alert("The continent is Buenos Aires")
+                    break;
+
+                case "Brazil":
+                    alert("The continent is Brasília")
+                    break;
+
+                case "Canada":
+                    alert("The continent is Ottawa")
+                    break;
+
+                case "Singapore":
+                    alert("The continent is Singapore")
+                    break;
+
+                case "Sweden":
+                    alert("The continent is Stockholm")
+                    break;   
+      
+        }
+
+
+            
+ }
+                
+     </script>
+    </body>
+</html>

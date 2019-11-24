@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+        @media(min-width:600px){
+            *{
+            font-family:'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        .flex-div{
+            display:flex;
+            flex-direction:column;
+            margin:5px;
+            padding:10px;
+        }
+        #nav{
+            flex-grow:1;
+            background:yellow;
+            border:1px solid black;
+            height:60px;
+        }
+        #leftBox{
+            flex-grow: 1;
+            background:red;
+            height:200px;
+            margin-bottom: 20px;
+        }
+        #rightBox{
+            /* display:flex; */
+            flex-direction:column;
+            flex-grow: 1;
+            height:200px;
+        }
+        #rightBox > div{
+            /* flex-direction: column; */
+            border:1px solid black;
+            flex-grow: 1;
+            height:80px;
+            background:green;
+
+        }
+        .childRight{
+            margin-bottom:20px;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="flex-div">
+        <div id="nav">Navigation</div>
+    </div>
+    <div class="flex-div">
+        <div id="leftBox">Left Box</div>
+        <div id="rightBox">
+            <div class="childRight">Right Box</div>
+            <div class="childRight">Right Box</div>
+            <div>Right Box</div>
+        </div>
+    </div>
+    
+</body>
+</html>

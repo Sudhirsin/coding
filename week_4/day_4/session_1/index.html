@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" id="num1" name = "num1">
+	<input type="text" id="num2" name = "num2">
+	<p id="exponentRes"> </p>
+	</hr>
+	<button onclick="exponent()" id="btnExponent">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="showResultMul"></p>
+	<input type="text" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="email">
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+            var a=document.getElementById("num1").value
+            var b=document.getElementById("num2").value
+            var result=1
+            for(var i=0; i<b; i++){
+                result= result*a
+            }
+            document.getElementById("exponentRes").innerHTML=result
+			
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+            var takeLimit=document.getElementById("limit").value
+            var sum=0
+            for(var i=1; i<=takeLimit; i++){
+                if(i%15==0){
+                    sum=sum+i
+                }
+            }
+            document.getElementById("showResultMul").innerHTML=sum
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+            var takeEmail=document.getElementById("email").value
+            
+		}
+	</script>
+</body>
+</html>

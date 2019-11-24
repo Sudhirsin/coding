@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session 2 Part2</title>
+        <style>
+            #submitButton{
+                font-size: 25px;
+                font-family: 'Times New Roman', Times, serif;
+                margin-left:600px;
+                margin-top:350px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+
+
+        <script>
+            var bodyEle=document.querySelector('body')
+            function creatLayout(){
+                //bodyEle.style.background="blue"
+                var div=document.createElement('div')
+                div.style.width="800px"
+                div.style.height="500px"
+                div.style.background="blue"
+                //div.style.float="right"
+                //div.style.marginTop="500px"
+                div.id="container"
+                bodyEle.appendChild(div)
+
+                //creating button
+                var button=document.createElement('button')
+                button.style.background="green"
+                button.style.width="150px"
+                button.style.height="80px"
+                button.textContent="SUBMIT"
+                button.style.borderRadius="10px"
+                button.id="submitButton"
+                div.appendChild(button)
+
+                //color change on hover
+                var cont=document.querySelector('container')
+                var btnColor=document.querySelector('submitButton')
+                function mouseHover(){
+                    button.style.background="yellow"
+
+                }
+                cont.addEventListener('mouseover', mouseHover)
+
+
+                
+            }
+            window.addEventListener('load', creatLayout)
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p>First P</p>
+            <p>Second P</p>
+            <p>Third P</p>
+        </div>
+        <div id="temp">
+            <p>Test P1</p>
+            <p>Test P2</p>
+            <p>Test P3</p>
+        </div>
+        <hr/>
+        <button id="btnChnage1">Change H1</button>
+        <button id="btnChnage3">Change H3</button>
+        <button id="btnChnage5">Change H5</button>
+        <button id="btnChnageDiv">Change DIV</button>
+        <button id="btnChnageP">Change P</button>
+        <button id="btnSetId">Set ID</button>
+        <script>
+            // chnage color h1
+            var btnChangeColorRed=document.querySelector('#btnChnage1')
+            function changeH1(){
+                var chngHFirst=document.querySelector('h1')
+                chngHFirst.setAttribute('class','class-h1')
+            }
+            btnChangeColorRed.addEventListener('click', changeH1)
+
+            //change h3 all 
+            var btnChngColorH3=document.querySelector('#btnChnage3')
+            function chnageH3(){
+                var chngeH3Color=document.querySelectorAll('h3')
+                for(var i=0; i<chngeH3Color.length; i++){
+                    chngeH3Color[i].setAttribute('class', 'class-h3')  
+                }
+                
+            }
+            btnChngColorH3.addEventListener('click', chnageH3)
+
+            //change h5 all 
+            var btnChngColorH5=document.querySelector('#btnChnage5')
+            function chnageH5(){
+                var chngeH5Color=document.querySelectorAll('h5')
+                for(var i=0; i<chngeH5Color.length; i++){
+                    chngeH5Color[i].setAttribute('class', 'class-h5')  
+                }
+                
+            }
+            btnChngColorH5.addEventListener('click', chnageH5)
+
+            //div withid box
+            var btnChngColorDiv=document.querySelector('#btnChnageDiv')
+            function chnageDiv(){
+                var chngeDivColor=document.querySelectorAll('#box div')
+                for(var i=0; i<chngeDivColor.length; i++){
+                    chngeDivColor[i].setAttribute('class', 'class-div')  
+                }
+                
+            }
+            btnChngColorDiv.addEventListener('click', chnageDiv)
+
+            //chnage p inside id cont
+            var btnChngColorP=document.querySelector('#btnChnageP')
+            function chnageP(){
+                var chngePColor=document.querySelectorAll('#cont p')
+                for(var i=0; i<chngePColor.length; i++){
+                    chngePColor[i].setAttribute('class', 'class-p')  
+                }
+                
+            }
+            btnChngColorP.addEventListener('click', chnageP)
+
+            //2nd p inside id temp have test-2
+            var btnSet=document.querySelector('#btnSetId')
+            function setId(){
+                var setIdP=document.querySelectorAll('#temp p')
+                for(var i=0; i<setIdP.length; i++){
+                    if(i==1){
+                        setIdP[i].setAttribute('id', 'test-2') 
+                    }
+                }
+            }
+            btnSet.addEventListener('click', setId)
+
+
+        </script>
+    </body>
+</html>

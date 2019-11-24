@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        @media(min-width:600px){
+           *{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 25px;
+            }
+            .flex-div{
+                display:flex;
+                flex-direction:column;
+                margin:20px;
+            
+            }
+            #nav{
+                flex-grow:1;
+                background:yellow;
+                height:60px;
+            }
+            .box{
+                flex-grow:1;
+                height:200px;
+                /* border:1px solid black; */
+            }
+            #box1{
+                background: red;
+                margin-bottom:20px;
+                
+            }
+            #box2{
+                background: chartreuse;
+                margin-bottom:20px;
+                
+            }
+            #box3{
+                background: lightseagreen;
+                margin-bottom:20px;
+                
+            }
+            #box4{
+                background:lightslategray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-div">
+        <div id="nav">Navigation</div>
+    </div>
+    <div class="flex-div">
+        <div class="box" id="box1">Box1</div>
+        <div class="box" id="box2">Box2</div>
+        <div class="box" id="box3">Box3</div>
+        <div class="box" id="box4">Box4</div>
+    </div>
+</body>
+</html>

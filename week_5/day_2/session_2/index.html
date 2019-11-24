@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            *{
+                font-family:'Times New Roman', Times, serif;
+                margin:5px;
+                color:darkcyan
+            }
+            #container{
+                display:flex;
+                height:500px;
+                /* background:red; */
+            }
+            .mainText{
+                font-size:25px;
+            }
+            #add{
+                flex:1;
+                border:2px solid greenyellow;
+                border-radius: 10px;
+                
+            }
+            #table{
+                /* display:flex; */
+                flex:2;
+                border:2px solid greenyellow;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .lineProduct{
+                /* margin-top: 100px; */
+                display:flex;
+                flex-direction: row;
+            }
+            .pdct{
+                flex:3;
+            }
+            #setting{
+                flex:1;
+                border:2px solid greenyellow;
+                border-radius: 10px;
+                text-align: center;
+            }
+            input{
+                width:150px;
+                height:25px;
+                border-radius: 5px;
+                border:2px solid lightgreen;
+            }
+            #btnAdd{
+                width:80px;
+                height: 30px;
+                font-size:15px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <!-- FORM to add -->
+            <div id="add">
+                <form>
+                    <div class="mainText">Add Your Product Details</div>
+                    <div>Product:</div>
+                    <div><input type="text" id="product" placeholder="Enter Product Name"></div>
+
+                    <div>Price:</div>
+                    <div><input type="text" id="price" placeholder="Enter Price"></div>
+
+                    <div>Quantity:</div>
+                    <div><input type="text" id="quantity" placeholder="Enter Qunatity"></div>
+                    <br />
+                    <input type="submit" value="Add" id="btnAdd" />
+                </form>
+            </div>   
+            <!-- TABLE -->
+            <div id="table">
+                 <div class="mainText">Table</div>
+                 <div class="lineProduct">
+                        <div class="pdct">Serial No.</div>
+                        <div class="pdct">Product</div>
+                        <div class="pdct">Price</div>
+                        <div class="pdct">Quantity</div>
+                        <div class="pdct">Total</div>
+                </div>
+                <!--Test table value-->
+                <!-- <div class="lineProduct">
+                    <div class="pdct">Serial No.</div>
+                    <div class="pdct">Product</div>
+                    <div class="pdct">Price</div>
+                    <div class="pdct">Quantity</div>
+                    <div class="pdct">Total</div>
+            </div> -->
+
+            </div>
+            <!-- SETTINGS -->
+            <div id="setting">
+                <div class="mainText">Settings</div>
+                <div>
+                    <input type="submit" value="Font size" id="fontSize"/>
+                    <input type="submit" value="Font color" id="fontColor"/>
+                    <input type="submit" value="Background Color" id="bgColor"/>
+                </div> 
+            </div>
+        </div>
+        <script>
+            var addbtn=document.querySelector('#btnAdd')
+            var arrProduct=[]
+            var tblData=[]
+            function addDetails(){
+                var product=document.getElementById('product').value
+                var price=document.getElementById('price').value
+                var quantity=document.getElementById('quantity').value
+
+                //calculating total and sr.no
+                var count=0
+                count++
+                var total=parseInt(price)*parseInt(quantity)
+                var objProduct={
+                    sr:count,
+                    Product:product,
+                    Price:price,
+                    Quantity:quantity,
+                    Total:total
+                }
+
+                arrProduct.push(objProduct)
+                event.preventDefault()
+                console.log(arrProduct)
+
+
+               //adding data into table
+                var table=document.getElementById("table")
+                var product=document.createElement('div')
+                product.setAttribute("class", "lineProduct")
+                table.appendChild(product)
+
+                for(var i=0; i<arrProduct.length; i++){
+                    for(key in arrProduct[i]){
+                        var child=document.createElement('div')
+                        child.setAttribute('class', 'pdct')
+                        child.innerHTML=arrProduct[i][key]
+                        product.appendChild(child)
+                    }
+                }
+
+                //reset form
+
+                // document.getElementById('product').value=""
+                // document.getElementById('price').value=""
+                // document.getElementById('quantity').value=""
+
+                arrProduct.shift()
+            }
+            addbtn.addEventListener('click', addDetails)
+
+            //chnage font size
+            var tblFont=document.querySelectorAll('.lineProduct')
+            var fntSize=document.querySelector("#fontSize")
+            function fontSizeChange(){
+                for(var i=0; i<tblFont.length; i++){
+                    tblFont[i].style.fontSize="30px"
+                } 
+            }
+            fntSize.addEventListener('click',fontSizeChange)
+            
+            //change font color
+            var tblFont=document.querySelectorAll('.lineProduct')
+            var fntClr=document.querySelector("#fontColor")
+            function fontColorChange(){
+                for(var i=0; i<tblFont.length; i++){
+                    tblFont[i].style.color="red"
+                } 
+                
+            }
+            fntClr.addEventListener('click',fontColorChange)
+
+            //alternate background color
+            var bgColor=document.querySelector("#bgColor")
+            function fontBgColor(){
+                for(var i=1; i<tblFont.length; i=i+2){
+                    tblFont[i].style.background="lightgreen"
+                } 
+                
+            }
+            bgColor.addEventListener('click',fontBgColor)
+
+ 
+
+            
+        
+        </script>
+    </body>
+</html>

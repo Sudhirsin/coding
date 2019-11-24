@@ -1,0 +1,15 @@
+course
+course/all
+course/week_1
+course/week_1/day_3
+course/week_1/day_5
+course/week_1/day_4
+course/week_1/day_2
+course/week_1/.day_6
+course/week_1/day_1
+course/week_2
+course/week_2/day_3
+course/week_2/day_5
+course/week_2/day-4
+course/week_2/day_2
+course/week_2/day_1

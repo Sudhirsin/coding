@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid_3</title>
+        <style>
+         .grid-box{
+             display:grid;
+             grid-gap:20px;
+             grid-template-columns: 100px 100px 100px 100px;
+             grid-template-rows: 100px 100px 100px 100px;
+             justify-content: center;
+         }
+         .box1{
+             background:teal;
+         }
+         .grid-box div:nth-of-type(8), .grid-box div:nth-of-type(10){
+             grid-column-start:1;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="grid-box">
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div> 
+        
+        </div>
+
+    </body>
+</html>

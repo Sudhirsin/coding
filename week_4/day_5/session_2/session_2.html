@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session 2</title>
+    </head>
+    <body>
+
+
+
+
+        <script>
+            function random(num){
+            return Math.floor(Math.random()*num);
+            }
+
+            var bodyEle=document.querySelector('body')
+            function bodyResizeColor(){
+                var randomColor='rgb('+random(255)+','+random(255)+','+random(255)+')';
+                bodyEle.style.background=randomColor
+            }
+            window.addEventListener('resize', bodyResizeColor)
+        
+        </script>
+    </body>
+</html>

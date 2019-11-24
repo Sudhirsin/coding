@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome Dash Page</h1>
+    <h1 id="userTag"></h1>
+    <p id="loingTime"></p>
+    <p id="sessionEndTime"></p>
+
+    <input type="submit" value="Logout" id="btnLog" />
+    
+<script>
+        var user=localStorage.getItem("username")
+        var h1=document.querySelector('#userTag')
+        h1.innerHTML=user
+
+        var p1=document.querySelector('#loingTime')
+        var date= new Date()
+        p1.innerHTML="login time: "+date
+
+        //getting hours minute and seconds
+        var hours=date.getHours()
+        var minute=date.getMinutes()
+        var sec=date.getSeconds()
+        var p2=document.querySelector('#sessionEndTime')
+        p2.innerHTML="logout time:"+hours+(minute+)+sec
+
+
+    //logout and redirect to login page
+    var logout=document.querySelector('#btnLog')
+
+    function logOut(){
+        window.location.href="http://127.0.0.1:5500/session_1/index.html"
+    }
+
+    logout.addEventListener('click', logOut)</script>
+
+</body>
+</html>

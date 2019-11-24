@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button onclick="btnChangeContent1()" id="createHeading">Create H1</button>
+        <button onclick="btnChangeContent2()">Create 2 H3</button>
+        <button onclick="btnCreateDiv()">Create DIVS</button>
+        <button onclick="addStudent()">Add Students</button>
+        <button onclick="btnCopyright()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+       
+            //Creating two h1 tag inside div heading
+            function btnChangeContent1(){
+                var heading1=document.createElement('h1')
+                heading1.textContent="MASAI"
+
+                var divHeading=document.querySelector('#headings')
+                divHeading.appendChild(heading1)
+            }
+
+            function btnChangeContent2(){
+                var heading2_1=document.createElement('h3')
+                heading2_1.textContent="A Transformation in Educaton!"
+
+                var heading2_2=document.createElement('h3')
+                heading2_2.textContent="Learn to earn, pay when you get."
+
+                var divHeading2_1=document.querySelector('#headings')
+                divHeading2_1.appendChild(heading2_1)
+
+                var divHeading2_2=document.querySelector('#headings')
+                divHeading2_2.appendChild(heading2_2)
+            }
+
+            //Creating two h3 tag inside div heading
+            //function btnChangeContent2(){
+                //var heading3=documnet.createElement('h3')
+                //var heading3_2=documnet.createElement('h3')
+                //heading3.textContent="A Transformation in Educaton!"
+                //heading3_2.textContent="Learn to earn, pay when you get."
+
+                //var divHeading3=document.querySelector('#headings')
+                //divHeading3.appendChild(heading3)
+
+                //var divHeading3_2=document.querySelector("#headings")
+                //divHeading3_2.appendChild(heading3_2)    
+            //}
+            
+            //Creating Div with Content
+            function btnCreateDiv(){
+                var divContent=document.querySelector('#cont')
+                for(var i=1; i<=10; i++){
+                    createDiv=document.createElement('div')
+                    createDiv.textContent="Content"+ i
+                    divContent.appendChild(createDiv)
+                }
+            }
+
+            //add student in li
+            function addStudent(){
+                var ulStudent=document.querySelector('#vikings')
+                for(var i=0; i<students.length; i++){
+                    createLi=document.createElement('li')
+                    createLi.textContent=students[i]
+                    ulStudent.appendChild(createLi)
+                }
+            }
+
+            //add p tag with text @ masai 2019
+            function btnCopyright(){
+                var createPara=document.createElement('p')
+                createPara.textContent="@ masai 2019"
+                document.body.insertBefore(createPara, createHeading)
+            }
+
+
+       
+        </script>
+    </body>
+</html>

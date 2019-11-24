@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unix Layout</title>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .flex-box{
+                display:flex;
+                justify-content: center;
+            }
+            .flex-box div{
+                margin:5px
+                
+            }
+            #box1{
+                 width:400px;
+                 height:250px;
+                 background: lightgray;
+                 flex-direction: column;
+                 margin:auto;
+            
+            }
+            #img1{
+                width:120px;
+                height:150px;
+                margin-left:130px;
+            }
+            div #linush{
+                text-align: center;
+                color: blue;
+                font-size: 30px;
+            }
+            div #linusp{
+                text-align: center;
+                font-size: 25px;
+            }
+            #box2{
+                  width:700px;
+                  height:150px;
+                  margin:auto;
+                  margin-top:20px;
+            }
+            #img2{
+                width:100px;
+                height:120px;
+            }
+            #salheading{
+                color:red;
+                font-size: 25px;
+            }
+            #box3{
+                 width:1000px;
+                 height:130px;
+                 margin:auto;
+                 background:orangered;
+                 margin-top:20px;
+                 flex-direction: row;
+            }
+            #bottom1{
+                 width:500px;
+                 height:120px;
+                 margin-left:15px;
+                 text-align: left;
+                 border-right:15px solid black;
+            }
+            #bottom2{
+                 width:500px;
+                 height:100px; 
+                 text-align: right;
+                 margin-right:15px;
+            }
+            .heading{
+                color:white;
+            }
+
+            @media(max-width: 600px){
+                *{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .flex-box{
+                display:flex;
+                justify-content: center;
+            }
+            .flex-box div{
+                margin:5px
+                
+            }
+            #box1{
+                 width:400px;
+                 height:250px;
+                 background:yellow;
+                 flex-direction: column;
+                 margin:auto;
+            
+            }
+            #img1{
+                width:120px;
+                height:150px;
+                margin-left:130px;
+            }
+            div #linush{
+                text-align: center;
+                color: blue;
+                font-size: 30px;
+            }
+            div #linusp{
+                text-align: center;
+                font-size: 25px;
+            }
+            #box2{
+                  width:700px;
+                  height:150px;
+                  margin:auto;
+                  margin-top:20px;
+            }
+            #img2{
+                width:100px;
+                height:120px;
+            }
+            #salheading{
+                color:orchid;
+                font-size: 25px;
+            }
+            #box3{
+                 width:1000px;
+                 height:130px;
+                 margin:auto;
+                 background:orange;
+                 margin-top:20px;
+                 flex-direction: row;
+            }
+            #bottom1{
+                 width:500px;
+                 height:120px;
+                 margin-left:15px;
+                 text-align: left;
+                 border-right:15px solid black;
+            }
+            #bottom2{
+                 width:500px;
+                 height:100px; 
+                 text-align: right;
+                 margin-right:15px;
+            }
+            .heading{
+                color:white;
+            } 
+        }
+        </style>
+    </head>
+    <body>
+        <div class="flex-box" id="box1">
+            <div id="img">
+                <img id="img1" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="Linus" />
+            </div>
+            <div id="linush">Linus Torvalds</div>
+            <div id="linusp">The creator of Linux & Git</div>
+        </div>
+        <div class="flex-box" id="box2">
+                <div id="imgSal">
+                    <img id="img2" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="Sal Khan" />
+                </div>
+                <div id="salhead">
+                    <div id="salheading">Sal Khan</div>
+                    <div id="salPara"><p>Salman Khan is the founder of the Khan Academy which has a mission<br />
+                     of providing a free world-class education for anyone, anywhere.</p></div>
+                </div>
+        </div>
+        <div class="flex-box" id="box3">
+                <div id="bottom1">
+                        <h2 class="heading">Ken Thompson</h2>
+                        <p>Designed and Implemented the<br />
+                        original Unix operating system</p>
+                    </div>
+                    <div id="bottom2">
+                        <h2 class="heading">Dennis Ritchie</h2>
+                        <p>The creator of C programming Langauge</p>
+                    </div>
+        </div>    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

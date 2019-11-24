@@ -1,0 +1,62 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            @media(max-width:600px){
+            .container{
+                display:flex;
+                width:100%;
+                /* border:1px solid red; */
+                justify-content: center;
+                font-size: 40px;
+                
+            }
+            .container, .container1 div{
+                margin:10px;
+                /* padding:10px; */
+                /* border:1px solid black; */
+
+            }
+            #nav{
+                flex-direction: row;
+                flex-basis:100%;
+                height:70px;
+                background: yellow;
+            }
+            .container1{
+                display:flex;
+                flex-direction: column;
+                width:100%;
+                /* border:1px solid red; */
+                justify-content: center;
+                /* font-size: 40px; */
+                
+            }
+            #leftBox{
+                
+                width:100%;
+                height:150px;
+                background: red;
+            }
+            #rightBox{
+                /* flex-direction: column; */
+                width:100%;
+                height:100px;
+                background:green;
+            }
+        }
+           
+        
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="nav">Navigation</div>
+        </div>
+        <div class="container1">
+            <div id="leftBox">Left Box</div><br />
+            <div id="rightBox">Right Box</div>
+        </div>
+    </body>
+</html>

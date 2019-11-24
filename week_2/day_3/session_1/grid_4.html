@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid_4</title>
+        <style>
+         .grid-box{
+             display:grid;
+             grid-gap:20px;
+             grid-template-columns: 100px 100px 100px 100px 100px;
+             grid-template-rows: 100px 100px 100px;
+             justify-content: center;
+         }
+         .box{
+             background: teal;
+         }
+         #box1{
+             grid-area:1 / 1 / span 1 /span 1;
+         }
+         #box2{
+             grid-area:1 / 2 / span 1 /span 3;
+         }
+         #box3{
+             grid-area:1 / 5 / span 1 /span 1;
+         }
+         #box4{
+            grid-area:2 / 1 / span 1 /span 3;
+         }
+         #box5{
+            grid-area:2 / 4 / span 1 /span 1; 
+         }
+         #box6{
+            grid-area:2 / 5 / span 1 /span 1;
+         }
+         #box7{
+            grid-area:3 / 1 / span 1 /span 1;
+         }
+         #box8{
+            grid-area:3 / 2 / span 1 /span 1;
+         }
+         #box9{
+            grid-area:3 / 3 / span 1 /span 3; 
+         }
+        </style>
+    </head>
+    <body>
+        <div class="grid-box">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+            <div class="box" id="box9"></div>
+        </div>
+
+
+    </body>
+</html>
