@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colours</title>
+</head>
+<body>
+	<h1 class="head1 red">MASAI H1</h1>
+	<h2 class="head2 green">MASAI H2</h2>
+	<h3 class="head3 red">MASAI H3</h3>
+    <h4 class="head4 green">MASAI H4</h4>
+    <h4 class="head5 green">MASAI H4</h4>
+	<div class="con1 red">School C1</div>
+	<div class="con2 green">School C2</div>
+	<div class="con3 red">School C3</div>
+	<p class="para1 red">Coding P1</p>
+	<p class="para2 green">Coding P2</p>
+	<p class="para3 red">Coding P3</p>
+	<hr>
+	<button id="changeH1">Change H1</button>
+	<button id="changeH2">Change H2</button>
+    <button id="changeH3">Change H3</button>
+    <button id="changeH4">Change H4</button>
+	<button id="changeDiv">Change DIVS</button>
+    <button id="p">Change Paragraph</button>
+    <button id="changeRed">Change Red</button>
+    <button id="changeGreen">Change Green</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#changeH1').click(function(){
+                $('h1').css("font-size","70px");
+            });
+            $('#changeH2').click(function(){
+                $('h1').css({"font-size":"32px", "padding":"10px"});
+            });
+            $('#changeH3').click(function(){
+                $('h3').css({"background":"black", "color":"white"});
+            });
+           
+            $('#changeH4').click(function(){
+                $('h4').css({"border":"2px solid black", "marrgin-top":"10px", "margin-bottom":"10px"});
+            });
+            $('#changeDiv').click(function(){
+                $('div').css("padding","6px 8px")
+            });
+            $("#p").click(function(){
+                $('p').css({"color":"purple", "font-weight":"bolder"});
+            });
+            $("#changeRed").click(function(){
+                $('.red').css("color", "red")
+            });
+            $("#changeGreen").click(function(){
+                $('.red').css("color", "green")
+            });
+
+
+            
+        });
+    
+    </script>
+</body>
+</html>
