@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">   
+    <title>Registration</title>
+    <style>
+        .box{
+            height:500px;
+        }
+    
+    </style>
+
+</head>
+<body>
+
+    <div class="container" id="displayData">
+        <div class="row">
+            <!-- form -->
+            <div class="col-6 box border border-primary " id="formDetails" >
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <label id="lblName" for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name">
+                            <p id="para"></p>
+                        </div>
+                        <div class="form-group">
+                            <label id="lblEmail" for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            <p id="para1"></p>
+                        </div>
+                        <div class="form-group">
+                            <label id="lblPassword" for="email">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="form-group">
+                            <label id="lblMob" for="mobile">Mobile</label>
+                            <input type="text" class="form-control" id="mobile" placeholder="Enter mobile">
+                            <p id="para2"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-dark text-white text-center" id="register">Resgiter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Display Data -->
+            <div class="col-6 box border border-primary bg-dark" id="box1">
+                <div class="form-group">
+                    <label id="lblName" for="name">Name</label>
+                    <h2 id="displayName"></h2>
+                </div>
+                <div class="form-group">
+                    <label id="lblEmail" for="email">Email</label>
+                    <h2 id="displayEmail"></h2>
+                </div>
+                <div class="form-group">
+                    <label id="lblMob" for="mobile">Mobile</label>
+                    <h2 id="displayMob"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="registration_api.js"></script>   
+</body>
+</html>
+
+
+
+    

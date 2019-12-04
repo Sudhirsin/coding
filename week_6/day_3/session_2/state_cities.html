@@ -10,8 +10,38 @@
     <select id="state"></select>
     <button>Next</button>
     <select id="city"></select>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         var state_cities = [{"state": "Karnataka", "cities": ["Bangalore", "Mysore"]}, {"state": "Tamil Nadu", "cities": ["Chennai", "Tanjore"]}] 
+        
+        $(document).ready(function(){
+            state_cities.forEach(function(val){
+                $('#state').append('<option value='+[val.state]+'>'+ val.state+'</option>')
+
+                // $('#city').append('<option>'+ val.cities+'</option>')
+                // for(key in val.cities){
+                //     $('#city').append('<option>'+val.cities[key]+'</option>')
+                // }
+            });
+            var state= $('#state').val();
+            $('button').click(function(){
+                $('#city').text=""
+                alert("hello")
+                state_cities.forEach(function(ele){
+                    if(state==ele.state){
+                       for(key in ele.cities){
+                           $('#city').append('<option>'+ ele.cities[key]+'</option>')
+                       } 
+                    }
+                });
+            });
+
+
+        });
+       
     </script>
 </body>
 </html>
