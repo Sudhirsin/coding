@@ -51,10 +51,73 @@
             document.getElementById("showResultMul").innerHTML=sum
 		}
 		//Write javascript for FSD.JS.9.3 here
-		function validateEmail(){
-            var takeEmail=document.getElementById("email").value
-            
-		}
+			function validateEmail() {
+				var takeEmail = document.getElementById("email").value
+
+				//email verification
+				function aliasCheck(alias) {
+					flag = true
+					alias = alias.split('')
+
+					for (var i = 0; i < alias.length; i++) {
+						if (alias[i] == "" || alias[i] == '.' || alias[i] == '..' || alias[i] == '_' || alias[i] == '-') {
+							return false
+						} else {
+							return true
+						}
+					}
+
+				}
+
+				function checkDomain(domain) {
+					if (domain !== "") {
+						if (domain[0] == '.' || domain[0] == '.' || domain[0] == '..' || domain[0] == '_' || domain[0] == '-') {
+							return false
+						} else {
+							domain = domain.split('.')
+							//checkting top leve domain
+							if (domain[1] == 'com' || domain[1] == 'in' || domain[1] == 'net' || domain[1] == 'masai' || domain[1] == 'au' || domain[1] == 'co' || domain[1] == 'jp') {
+								return true
+							} else {
+								return false
+							}
+						}
+						return true
+					} else {
+						return false
+					}
+				}
+				function hasEmail(newemail) {
+					//split from @
+					var emailCheck = true
+					var mail = []
+					mail = newemail.split('@')
+
+					// checking mail has otherthan 2 values
+					if (mail.length > 2) {
+						alert('Invalid email')
+						return false
+					} else {
+						var alias = mail[0]
+						var domain = mail[1]
+
+						aliasCheck(alias)
+						checkDomain(domain)
+					}
+
+					if (aliasCheck(alias) == true && checkDomain(domain)) {
+						emailCheck = true
+						alert("Valid email")
+					} else {
+						emailCheck = false
+						alert('Invalid email')
+					}
+					return emailCheck
+				}
+
+				console.log(hasEmail(takeEmail))
+
+			}
 	</script>
 </body>
 </html>

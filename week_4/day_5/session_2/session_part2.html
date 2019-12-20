@@ -28,11 +28,12 @@
                 //div.style.float="right"
                 //div.style.marginTop="500px"
                 div.id="container"
+
                 bodyEle.appendChild(div)
 
                 //creating button
                 var button=document.createElement('button')
-                button.style.background="green"
+                button.style.background="red"
                 button.style.width="150px"
                 button.style.height="80px"
                 button.textContent="SUBMIT"
@@ -41,8 +42,8 @@
                 div.appendChild(button)
 
                 //color change on hover
-                var cont=document.querySelector('container')
-                var btnColor=document.querySelector('submitButton')
+                var cont=document.querySelector('#container')
+                var btnColor=document.querySelector('#submitButton')
                 function mouseHover(){
                     button.style.background="yellow"
 

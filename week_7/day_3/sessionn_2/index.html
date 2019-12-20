@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="container" id="btnStd">
+        <div class="row text-center mt-5 mb-5">
+            <div class="col">
+                <div class="card bg-dark">
+                    <img src="resourcess/hands-raised.jpg" class="card-img" alt="">
+                    <div class="card-img-overlay">
+                        <h2 class="card-title font-weight-bold p-4">Student Data Profile</h2>
+                        <button id="btnShowStdData" class="btn btn-outline-dark font-weight-bold py-4 bg-dark text-white">
+                            Click Here to See Student Data
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id='stdDataContainer'>
+        <div class="row">
+            <div class="col-4 mt-2">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Rsult per pages:</h3>
+                    </div>
+                    <div class="col-4">
+                        <select id="stdPage" class="form-control">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Pages:</h3>
+                    </div>
+                    <div class="col-6">
+                        <select id="resPerPage" class="form-control">
+                            <option value="10">--Result--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <div class="row">
+                    <div class="col">
+                        <input id='searchStd' type='text' class='form-control' placeholder="Search here...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row ml-1">
+            <div class="col">
+                <div class="row">
+                    <h4>Gender: </h4>
+                    <div class="col">
+                        <div class="form control">
+                            <input class="gender" name="gender" id="male" type='radio' value='male'>
+                            <label for="male">Male</label>
+                            <input class="gender" name="gender" id="female" type='radio' value='female'>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <h4>Sort: </h4>
+                    <div class="col">
+                        <select id='sortByAscDesc'class="form-control">
+                            <option>---Sort---</option>
+                            <option value="ascending">Ascending</option>
+                            <option value="descendind">Descending</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <h4>Filter Based on total: </h4>
+                    <div class="col">
+                        <select id='sortTotal' class="form-control">
+                            <option>---Filter total---</option>
+                            <option value="highToLow">High to low</option>
+                            <option value="LowToHigh">Low to high</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2 class="font-weight-bold text-center mt-3">Students Data</h2>
+                <table class="table border border-dark bg-dark text-white rounded">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Maths</th>
+                            <th>English</th>
+                            <th>Science</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></Script>
+   </body>
+</html>
