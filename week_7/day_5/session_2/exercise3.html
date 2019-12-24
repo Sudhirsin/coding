@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 3</title>
+
+</head>
+
+<body>
+   <div id="root"></div>
+   <label>Value of X</label>
+   <input id='input1' type='number'>
+   <label>Value of X</label>
+   <input id='input2' type='number'>
+   <button onclick="addSum()">Add</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        function sum(){
+            let val1 = document.getElementById('input1').value
+            let val2 = document.getElementById('input2').value
+            const elem = (
+                <div>
+                    <h1>Sum of X and Y:- {Number(val1)+Number(val2)}</h1>
+                </div>
+            )
+            ReactDOM.render(elem, document.getElementById('root'))
+        }
+
+        function addSum(){
+            sum()
+        }
+    </script>
+</body>
+
+</html>

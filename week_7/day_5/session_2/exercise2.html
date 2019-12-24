@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 2</title>
+
+</head>
+
+<body>
+   <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        const todoTasks = ['Cooking', 'Cleaning', 'Homewrks',]
+        const user = {
+            name : 'Sudhir Singh',
+            age : 24,
+            DOB : '08/06/1995',
+            favoriteColor : 'Black'
+        } 
+
+        let taskLi = todoTasks.map(function(val){
+            return (<li key={val}>{val}</li>)
+        })
+
+        function showTodo(){
+            const elem = (
+                <div>
+                    <h1>My Todo List</h1>
+                    <ul>
+                        {taskLi}    
+                    </ul>
+                    <p>My name is {user.name}.I am {user.age} years old. DOB is {user.DOB} and favourite color is {user.favoriteColor}</p>
+                </div>
+            );
+            ReactDOM.render(elem, document.getElementById('root'))
+        }
+        showTodo()
+    </script>
+</body>
+
+</html>
